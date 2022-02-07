@@ -1,3 +1,4 @@
+//It Works!
 function fetchData() {
     fetch("https://reqres.in/api/users?page=2")
     .then ((response) => {
@@ -14,11 +15,11 @@ function fetchData() {
             <div class="user">
             <p> <img src = "${user.avatar}" alt="${user.first_name}"></p>
             <p> Zovem se ${user.first_name}</p>
-            <p>Moj mail je ${user.first_email}</p>
+            <p>Moj mail je ${user.email}</p>
             </div>`;
     })
     .join("");
-    document.querySelector("#api").innerHTML = html;
+    document.querySelector("#API").innerHTML = html;
 })
 .catch((error) => {
     console.log(error);
